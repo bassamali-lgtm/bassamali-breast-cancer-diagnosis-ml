@@ -1,1 +1,106 @@
+Run started
+Initializing environment
+Installing packages
+Running code
+<exec>:11: DeprecationWarning: 
+Pyarrow will become a required dependency of pandas in the next major release of pandas (pandas 3.0),
+(to allow more performant data types, such as the Arrow string type, and better interoperability with other libraries)
+but was not found to be installed on your system.
+If this would cause problems for you,
+please provide us feedback at https://github.com/pandas-dev/pandas/issues/54466
+        
+######################################################################
 
+BREAST CANCER DIAGNOSIS AND PATIENT SUBGROUP DISCOVERY
+
+######################################################################
+
+======================================================================
+
+LOADING BREAST CANCER WISCONSIN DATASET
+
+======================================================================
+
+Number of samples : 569
+
+Number of features: 30
+
+
+Class distribution:
+target
+0    212
+1    357
+Name: count, dtype: int64
+======================================================================
+
+STRATIFIED 5-FOLD CROSS-VALIDATION
+
+======================================================================
+
+              Model  Accuracy Mean  Accuracy Std  Precision Mean  Precision Std  Recall Mean  Recall Std  F1 Mean  F1 Std  ROC-AUC Mean  ROC-AUC Std
+Logistic Regression         0.9737        0.0166          0.9683         0.0290       0.9916      0.0112   0.9794  0.0127        0.9953       0.0053
+          SVM (RBF)         0.9772        0.0163          0.9756         0.0218       0.9888      0.0105   0.9820  0.0128        0.9945       0.0060
+  Gradient Boosting         0.9456        0.0217          0.9443         0.0340       0.9720      0.0152   0.9575  0.0162        0.9920       0.0051
+      Random Forest         0.9561        0.0123          0.9651         0.0282       0.9665      0.0272   0.9651  0.0097        0.9885       0.0083
+Selected model: Logistic Regression
+
+======================================================================
+
+80/20 STRATIFIED HOLDOUT TEST
+
+======================================================================
+
+Training samples: 455
+
+Testing samples : 114
+
+
+Holdout results:
+Accuracy : 0.9825
+
+Precision: 0.9861
+
+Recall   : 0.9861
+
+F1 Score : 0.9861
+
+ROC-AUC  : 0.9954
+
+
+Confusion Matrix:
+[[41  1]
+ [ 1 71]]
+
+Classification Report:
+              precision    recall  f1-score   support
+
+   malignant       0.98      0.98      0.98        42
+      benign       0.99      0.99      0.99        72
+
+    accuracy                           0.98       114
+   macro avg       0.98      0.98      0.98       114
+weighted avg       0.98      0.98      0.98       114
+
+======================================================================
+
+PCA + K-MEANS CLUSTERING
+
+======================================================================
+
+Explained variance with 5 components: 0.8473
+
+Adjusted Rand Index: 0.6707
+
+======================================================================
+
+ANALYSIS COMPLETED SUCCESSFULLY
+
+======================================================================
+
+
+Generated files:
+results/cross_validation_results.csv
+
+results/holdout_results.csv
+
+results/pca_kmeans_results.csv
